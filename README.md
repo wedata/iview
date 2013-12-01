@@ -6,6 +6,9 @@ SITEINFOs for iview
 
 ## Data Scheme
 
+[Wedataのiview用データベースSITEINFO仕様 « ku](http://ido.nu/kuma/2008/10/02/wedata-iview-database-specification-draft/
+)
+
 ## Contributing
 
 1. Fork it.
