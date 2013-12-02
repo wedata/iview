@@ -3,7 +3,7 @@
   "name" : "ボケて 新着ボケ",
   "data" : {
     "url"         : "http:\/\/bokete.jp\/boke\/recent",
-    "paragraph"   : "\/\/div[contains(@class,'boke-list ')][div]",
+    "paragraph"   : "\/\/div[contains(@class,'boke-list ')][div[@class='boke-list-odai']]",
     "nextLink"    : "\/\/a[@class='boke-recent-pager']|\/\/a[@class='boke-recent-temp-pager']",
     "permalink"   : ".\/\/div[@class='boke-list-odai']\/\/a",
     "caption"     : ".\/\/h3",
@@ -14,7 +14,7 @@
   "name" : "ボケて 注目ボケ",
   "data" : {
     "url"         : "http:\/\/bokete.jp\/boke\/hot",
-    "paragraph"   : "\/\/div[contains(@class,'boke-entry ')][div]",
+    "paragraph"   : "\/\/div[contains(@class,'boke-entry ')][div[@class='photo']]",
     "nextLink"    : "id('pager-plusone')\/span[@class='pager-plusone-next']\/a",
     "permalink"   : ".\/\/div[@class='photo']\/a",
     "caption"     : ".\/\/p[@class='boke_read']",
@@ -91,7 +91,7 @@
   "name" : "imgfave",
   "data" : {
     "url"         : "http:\/\/imgfave.com\/",
-    "paragraph"   : "id('main_content')\/div[@class='item']",
+    "paragraph"   : "id('main_content')\/div[@class='item'][starts-with(@id,'item_')]",
     "nextLink"    : "id('pagination')\/span[@class='page_Next']\/a",
     "permalink"   : ".\/\/a[@class='image_link']\/@href",
     "caption"     : ".\/div[@class='image_title']\/a\/text()",
