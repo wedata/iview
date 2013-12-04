@@ -223,6 +223,20 @@
   }
 },
 {
+  "name" : "500px / Fresh",
+  "data" : {
+    "url"        : "http://500px.com/fresh",
+    "paragraph"  : "//div[@class='photo medium']",
+    "nextLink"   : "//a[@rel='next']",
+    "permalink"  : "./a[img]",
+    "subRequest" : {
+      "paragraph"   : "//div[@class='photo segment']",
+      "caption"     : "//title",
+      "imageSource" : ".//img[@class='the_photo']"
+    }
+  }
+},
+{
   "name" : "[NSFW] オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http:\/\/okinny.heypo.net\/",
