@@ -266,6 +266,22 @@
   }
 },
 {
+  "name" : "[pixiv] みんなの新着イラスト",
+  "data" : {
+    "url"         : "http://www.pixiv.net/new_illust.php",
+    "needReferer" : "http://*.pixiv.net/img*",
+    "paragraph"   : "//li[@class='image-item']",
+    "nextLink"    : "//a[@rel='next']",
+    "permalink"   : ".//a[@class='work']",
+    "subRequest"  : {
+      "paragraph"            : "//div[@class='works_display']",
+      "caption"              : "//title",
+      "imageSource"          : "./a/img",
+      "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),'.',substring-after(./a/img/@src,'_m.'))"
+    }
+  }
+},
+{
   "name" : "[NSFW] オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http:\/\/okinny.heypo.net\/",
