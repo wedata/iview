@@ -2,209 +2,209 @@
 {
   "name" : "ボケて 新着ボケ",
   "data" : {
-    "url"         : "http:\/\/bokete.jp\/boke\/recent",
-    "paragraph"   : "\/\/div[contains(@class,'boke-list ')][div[@class='boke-list-odai']]",
-    "nextLink"    : "\/\/a[@class='boke-recent-pager']|\/\/a[@class='boke-recent-temp-pager']",
-    "permalink"   : ".\/\/div[@class='boke-list-odai']\/\/a",
-    "caption"     : ".\/\/h3",
-    "imageSource" : ".\/\/div[@class='boke-list-odai']\/\/img"
+    "url"         : "http://bokete.jp/boke/recent",
+    "paragraph"   : "//div[contains(@class,'boke-list ')][div[@class='boke-list-odai']]",
+    "nextLink"    : "//a[@class='boke-recent-pager']|//a[@class='boke-recent-temp-pager']",
+    "permalink"   : ".//div[@class='boke-list-odai']//a",
+    "caption"     : ".//h3",
+    "imageSource" : ".//div[@class='boke-list-odai']//img"
   }
 },
 {
   "name" : "ボケて 注目ボケ",
   "data" : {
-    "url"         : "http:\/\/bokete.jp\/boke\/hot",
-    "paragraph"   : "\/\/div[contains(@class,'boke-entry ')][div[@class='photo']]",
-    "nextLink"    : "id('pager-plusone')\/span[@class='pager-plusone-next']\/a",
-    "permalink"   : ".\/\/div[@class='photo']\/a",
-    "caption"     : ".\/\/p[@class='boke_read']",
-    "imageSource" : ".\/\/div[@class='photo']\/a\/img"
+    "url"         : "http://bokete.jp/boke/hot",
+    "paragraph"   : "//div[contains(@class,'boke-entry ')][div[@class='photo']]",
+    "nextLink"    : "id('pager-plusone')/span[@class='pager-plusone-next']/a",
+    "permalink"   : ".//div[@class='photo']/a",
+    "caption"     : ".//p[@class='boke_read']",
+    "imageSource" : ".//div[@class='photo']/a/img"
   }
 },
 {
   "name" : "台湾美少女３姉妹",
   "data" : {
-    "url"          : "http:\/\/taiwan3sister.blogspot.com\/feeds\/posts\/default",
-    "paragraph"    : "\/\/x:entry",
-    "nextLink"     : "\/\/x:link[@rel='next']\/@href",
-    "permalink"    : ".\/\/x:link[@rel='alternate']\/@href",
-    "caption"      : ".\/x:title\/text()",
+    "url"          : "http://taiwan3sister.blogspot.com/feeds/posts/default",
+    "paragraph"    : "//x:entry",
+    "nextLink"     : "//x:link[@rel='next']/@href",
+    "permalink"    : ".//x:link[@rel='alternate']/@href",
+    "caption"      : "./x:title/text()",
     "subParagraph" : {
-      "paragraph"   : ".\/\/img[not(.\/@class)]",
-      "cdata"       : ".\/x:content",
-      "imageSource" : "concat(substring-before(.\/parent::a\/@href,\"-h\/\"),\"\/\",substring-after(.\/parent::a\/@href,\"-h\/\"))"
+      "paragraph"   : ".//img[not(./@class)]",
+      "cdata"       : "./x:content",
+      "imageSource" : "concat(substring-before(./parent::a/@href,'-h/'),'/',substring-after(./parent::a/@href,'-h/'))"
     }
   }
 },
 {
   "name" : "9GAG Fresh",
   "data" : {
-    "url"        : "http:\/\/9gag.com\/fresh",
-    "paragraph"  : "id('list-view-2')\/\/article",
-    "nextLink"   : "\/\/a[@class='btn badge-load-more-post']",
+    "url"        : "http://9gag.com/fresh",
+    "paragraph"  : "id('list-view-2')//article",
+    "nextLink"   : "//a[@class='btn badge-load-more-post']",
     "permalink"  : "./@data-entry-url",
     "subRequest" : {
-      "paragraph"   : "id('individual-post')\/article",
-      "caption"     : ".\/\/h2",
-      "imageSource" : ".\/div[@class='badge-entry-content post-container']\/\/img\/@src"
+      "paragraph"   : "id('individual-post')/article",
+      "caption"     : ".//h2",
+      "imageSource" : "./div[@class='badge-entry-content post-container']//img/@src"
     }
   }
 },
 {
   "name" : "9GAG GIF",
   "data" : {
-    "url"        : "http:\/\/9gag.com\/gif",
-    "paragraph"  : "id('list-view-2')\/\/article",
-    "nextLink"   : "\/\/a[@class='btn badge-load-more-post']",
+    "url"        : "http://9gag.com/gif",
+    "paragraph"  : "id('list-view-2')//article",
+    "nextLink"   : "//a[@class='btn badge-load-more-post']",
     "permalink"  : "./@data-entry-url",
     "subRequest" : {
-      "paragraph"   : "id('individual-post')\/article",
-      "caption"     : ".\/\/h2",
-      "imageSource" : ".\/div[@class='badge-entry-content post-container']\/\/img[@class='badge-item-animated-img']\/@src"
+      "paragraph"   : "id('individual-post')/article",
+      "caption"     : ".//h2",
+      "imageSource" : "./div[@class='badge-entry-content post-container']//img[@class='badge-item-animated-img']/@src"
     }
   }
 },
 {
   "name" : "Tumblr Dashboard (Needs to log in Tumblr)",
   "data" : {
-    "url"                  : "http:\/\/www.tumblr.com\/dashboard",
-    "paragraph"            : "\/\/li[div[contains(concat(\" \",normalize-space(@class),\" \"), \" is_photo \")]]",
-    "nextLink"             : "id(\"next_page_link\")",
-    "permalink"            : ".\/\/a[@class=\"post_permalink\"]",
-    "caption"              : ".\/\/div[@class=\"post_body\"]",
-    "imageSource"          : ".\/\/img[@class=\"image\"]\/@src",
-    "imageSourceForReblog" : ".\/\/img[@class=\"image\"]\/@src"
+    "url"                  : "http://www.tumblr.com/dashboard",
+    "paragraph"            : "//li[div[contains(concat(' ',normalize-space(@class),' '), ' is_photo ')]]",
+    "nextLink"             : "id('next_page_link')",
+    "permalink"            : ".//a[@class='post_permalink']",
+    "caption"              : ".//div[@class='post_body']",
+    "imageSource"          : ".//img[@class='image']/@src",
+    "imageSourceForReblog" : ".//img[@class='image']/@src"
   }
 },
 {
   "name" : "FFFFound!",
   "data" : {
-    "url"         : "http:\/\/ffffound.com\/",
-    "paragraph"   : "\/\/blockquote[@class='asset']",
-    "nextLink"    : "\/\/a[@rel='next']\/@href",
-    "permalink"   : ".\/\/img\/parent::a\/@href",
-    "caption"     : ".\/\/span[@class='quote']\/following-sibling::a",
-    "imageSource" : ".\/\/img\/@src"
+    "url"         : "http://ffffound.com/",
+    "paragraph"   : "//blockquote[@class='asset']",
+    "nextLink"    : "//a[@rel='next']/@href",
+    "permalink"   : ".//img/parent::a/@href",
+    "caption"     : ".//span[@class='quote']/following-sibling::a",
+    "imageSource" : ".//img/@src"
   }
 },
 {
   "name" : "imgfave",
   "data" : {
-    "url"         : "http:\/\/imgfave.com\/",
-    "paragraph"   : "id('main_content')\/div[@class='item'][starts-with(@id,'item_')]",
-    "nextLink"    : "id('pagination')\/span[@class='page_Next']\/a",
-    "permalink"   : ".\/\/a[@class='image_link']\/@href",
-    "caption"     : ".\/div[@class='image_title']\/a\/text()",
-    "imageSource" : ".\/\/a[@class='image_link']\/img[@class='lazy']\/@data-href|.\/\/a[@class='image_link']\/img\/@src"
+    "url"         : "http://imgfave.com/",
+    "paragraph"   : "id('main_content')/div[@class='item'][starts-with(@id,'item_')]",
+    "nextLink"    : "id('pagination')/span[@class='page_Next']/a",
+    "permalink"   : ".//a[@class='image_link']/@href",
+    "caption"     : "./div[@class='image_title']/a/text()",
+    "imageSource" : ".//a[@class='image_link']/img[@class='lazy']/@data-href|.//a[@class='image_link']/img/@src"
   }
 },
 {
   "name" : "Photo Journal - WSJ",
   "data" : {
-    "url"        : "http:\/\/blogs.wsj.com\/photojournal\/",
-    "paragraph"  : "id('postList')\/li",
-    "nextLink"   : "\/\/li[@class='blognav_prev']\/a",
-    "permalink"  : ".\/\/h1\/a\/@href",
+    "url"        : "http://blogs.wsj.com/photojournal/",
+    "paragraph"  : "id('postList')/li",
+    "nextLink"   : "//li[@class='blognav_prev']/a",
+    "permalink"  : ".//h1/a/@href",
     "subRequest" : {
-      "paragraph"   : "\/\/div[@class='articlePage']\/p",
+      "paragraph"   : "//div[@class='articlePage']/p",
       "caption"     : ".",
-      "imageSource" : ".\/\/img"
+      "imageSource" : ".//img"
     }
   }
 },
 {
   "name" : "pya!",
   "data" : {
-    "url"        : "http:\/\/pya.cc\/",
-    "paragraph"  : "\/\/div[@class='m_ma'][div[b[text()='Photo' or text()='Gif' or text()='Twitter']]]",
-    "nextLink"   : "\/\/a[@class='smpagelink'][@title='BACK']\/@href",
-    "permalink"  : ".\/div[@class='m_ma2']\/a\/@href",
+    "url"        : "http://pya.cc/",
+    "paragraph"  : "//div[@class='m_ma'][div[b[text()='Photo' or text()='Gif' or text()='Twitter']]]",
+    "nextLink"   : "//a[@class='smpagelink'][@title='BACK']/@href",
+    "permalink"  : "./div[@class='m_ma2']/a/@href",
     "subRequest" : {
-      "paragraph"   : "\/\/div[@class='neta']",
-      "caption"     : "\/\/title",
-      "imageSource" : ".\/\/img"
+      "paragraph"   : "//div[@class='neta']",
+      "caption"     : "//title",
+      "imageSource" : ".//img"
     }
   }
 },
 {
   "name" : "今日マチ子のセンネン画報",
   "data" : {
-    "url"          : "http:\/\/juicyfruit.exblog.jp\/",
-    "paragraph"    : "\/\/div[@class='POST']",
-    "nextLink"     : "\/\/a[@class='older_page']",
-    "permalink"    : ".\/\/div[@class='POST_TTL']\/a",
-    "caption"      : ".\/\/div[@class='POST_TTL']",
+    "url"          : "http://juicyfruit.exblog.jp/",
+    "paragraph"    : "//div[@class='POST']",
+    "nextLink"     : "//a[@class='older_page']",
+    "permalink"    : ".//div[@class='POST_TTL']/a",
+    "caption"      : ".//div[@class='POST_TTL']",
     "subParagraph" : {
-      "paragraph"   : ".\/\/img[@class='IMAGE_MID']",
-      "imageSource" : ".\/@src"
+      "paragraph"   : ".//img[@class='IMAGE_MID']",
+      "imageSource" : "./@src"
     }
   }
 },
 {
   "name" : "M O O D",
   "data" : {
-    "url"        : "http:\/\/haw-lin.com\/index",
-    "paragraph"  : "\/\/div[@class='module']",
-    "permalink"  : ".\/\/a\/@href",
+    "url"        : "http://haw-lin.com/index",
+    "paragraph"  : "//div[@class='module']",
+    "permalink"  : ".//a/@href",
     "subRequest" : {
-      "paragraph"   : "id('content_container')\/\/img",
-      "caption"     : "\/\/title",
-      "imageSource" : ".\/@src"
+      "paragraph"   : "id('content_container')//img",
+      "caption"     : "//title",
+      "imageSource" : "./@src"
     }
   }
 },
 {
   "name" : "Pixdaus",
   "data" : {
-    "url"         : "http:\/\/pixdaus.com\/pixdaus\/items\/browse\/newest\/",
-    "paragraph"   : "\/\/div[@class='item mediumSquare']\/div[@class='thumb']",
-    "nextLink"    : "\/\/div[@class='paging clearfix']\/a[@class='next']",
-    "permalink"   : ".\/a\/@href",
-    "caption"     : ".\/\/div[@class='title']\/a\/text()",
-    "imageSource" : "concat(substring-before(.\/a\/img\/@src,'_mdsq'),'_large',substring-after(.\/a\/img\/@src,'_mdsq'))"
+    "url"         : "http://pixdaus.com/pixdaus/items/browse/newest/",
+    "paragraph"   : "//div[@class='item mediumSquare']/div[@class='thumb']",
+    "nextLink"    : "//div[@class='paging clearfix']/a[@class='next']",
+    "permalink"   : "./a/@href",
+    "caption"     : ".//div[@class='title']/a/text()",
+    "imageSource" : "concat(substring-before(./a/img/@src,'_mdsq'),'_large',substring-after(./a/img/@src,'_mdsq'))"
   }
 },
 {
   "name" : "Astronomy Picture of the Day Archive",
   "data" : {
-    "url"        : "http:\/\/antwrp.gsfc.nasa.gov\/apod\/archivepix.html",
-    "paragraph"  : "\/\/b\/\/a",
-    "permalink"  : ".\/@href",
-    "caption"    : ".\/text()",
+    "url"        : "http://antwrp.gsfc.nasa.gov/apod/archivepix.html",
+    "paragraph"  : "//b//a",
+    "permalink"  : "./@href",
+    "caption"    : "./text()",
     "subRequest" : {
-      "paragraph"            : "\/\/center\/p\/a\/img",
-      "caption"              : "\/\/title\/text()",
-      "imageSource"          : ".\/@src",
-      "imageSourceForReblog" : ".\/parent::a\/@href"
+      "paragraph"            : "//center/p/a/img",
+      "caption"              : "//title/text()",
+      "imageSource"          : "./@src",
+      "imageSourceForReblog" : "./parent::a/@href"
     }
   }
 },
 {
   "name" : "Yanko Design",
   "data" : {
-    "url"        : "http:\/\/www.yankodesign.com\/",
-    "paragraph"  : "\/\/div[@class=\"postcontent\"]",
-    "nextLink"   : "\/\/div[@class=\"pagebar\"]\/a[last()-1]",
-    "permalink"  : ".\/\/h2\/a[@rel=\"bookmark\"]",
+    "url"        : "http://www.yankodesign.com/",
+    "paragraph"  : "//div[@class='postcontent']",
+    "nextLink"   : "//div[@class='pagebar']/a[last()-1]",
+    "permalink"  : ".//h2/a[@rel='bookmark']",
     "subRequest" : {
-      "paragraph"   : "\/\/div[@class='postexcerpt']\/p\/\/img",
-      "caption"     : "\/\/title\/text()",
-      "imageSource" : ".\/@src"
+      "paragraph"   : "//div[@class='postexcerpt']/p//img",
+      "caption"     : "//title/text()",
+      "imageSource" : "./@src"
     }
   }
 },
 {
   "name" : "deviantART",
   "data" : {
-    "url"        : "http:\/\/www.deviantart.com\/",
-    "paragraph"  : "\/\/div[@class='browse-results-page']\/\/div[contains(concat(' ',@class,' '),' tt-a ')]",
-    "nextLink"   : "\/\/div[@class='pagination']\/a\/@href",
-    "permalink"  : ".\/\/span[@class='details']\/a\/@href",
+    "url"        : "http://www.deviantart.com/",
+    "paragraph"  : "//div[@class='browse-results-page']//div[contains(concat(' ',@class,' '),' tt-a ')]",
+    "nextLink"   : "//div[@class='pagination']/a/@href",
+    "permalink"  : ".//span[@class='details']/a/@href",
     "subRequest" : {
-      "paragraph"            : "\/\/div[@class='dev-view-deviation']",
-      "caption"              : "\/\/title\/text()",
-      "imageSource"          : ".\/img[@class='dev-content-normal']\/@src",
-      "imageSourceForReblog" : ".\/img[@class='dev-content-full']\/@src"
+      "paragraph"            : "//div[@class='dev-view-deviation']",
+      "caption"              : "//title/text()",
+      "imageSource"          : "./img[@class='dev-content-normal']/@src",
+      "imageSourceForReblog" : "./img[@class='dev-content-full']/@src"
     }
   }
 },
@@ -284,56 +284,56 @@
 {
   "name" : "[NSFW] オキニー アダルト画像ブックマーク",
   "data" : {
-    "url"                  : "http:\/\/okinny.heypo.net\/",
-    "paragraph"            : "\/\/li[contains(@class,'hentry')]",
-    "nextLink"             : "\/\/a[@rel='next']",
-    "permalink"            : ".\/\/a[@rel='bookmark']",
-    "caption"              : ".\/\/a[@rel='bookmark']\/@title",
-    "imageSource"          : ".\/\/a[@rel='bookmark']\/img",
-    "imageSourceForReblog" : ".\/\/a[@class='image-source']\/@href"
+    "url"                  : "http://okinny.heypo.net/",
+    "paragraph"            : "//li[contains(@class,'hentry')]",
+    "nextLink"             : "//a[@rel='next']",
+    "permalink"            : ".//a[@rel='bookmark']",
+    "caption"              : ".//a[@rel='bookmark']/@title",
+    "imageSource"          : ".//a[@rel='bookmark']/img",
+    "imageSourceForReblog" : ".//a[@class='image-source']/@href"
   }
 },
 {
   "name" : "[NSFW] Tokyo Undressed",
   "data" : {
-    "url"          : "http:\/\/tokyoundressed.blogspot.com\/feeds\/posts\/default",
-    "paragraph"    : "\/\/x:entry",
-    "nextLink"     : ".\/\/x:link[@rel='next']\/@href",
-    "permalink"    : ".\/\/x:link[@rel='alternate']\/@href",
-    "caption"      : ".\/x:title\/text()",
+    "url"          : "http://tokyoundressed.blogspot.com/feeds/posts/default",
+    "paragraph"    : "//x:entry",
+    "nextLink"     : ".//x:link[@rel='next']/@href",
+    "permalink"    : ".//x:link[@rel='alternate']/@href",
+    "caption"      : "./x:title/text()",
     "subParagraph" : {
-      "paragraph"   : ".\/\/img[not(.\/@class)]",
-      "cdata"       : ".\/x:content",
-      "imageSource" : ".\/@src"
+      "paragraph"   : ".//img[not(./@class)]",
+      "cdata"       : "./x:content",
+      "imageSource" : "./@src"
     }
   }
 },
 {
   "name" : "[NSFW] みんくちゃんねる",
   "data" : {
-    "url"        : "http:\/\/minkchan.com\/",
-    "paragraph"  : "\/\/div[@class='article-outer hentry'][div[div[div[div[h2[a[starts-with(@href, 'http:\/\/minkchan.com')]]]]]]]",
-    "nextLink"   : "\/\/link[@rel='next']",
-    "permalink"  : ".\/\/h2\/a",
+    "url"        : "http://minkchan.com/",
+    "paragraph"  : "//div[@class='article-outer hentry'][div[div[div[div[h2[a[starts-with(@href, 'http://minkchan.com')]]]]]]]",
+    "nextLink"   : "//link[@rel='next']",
+    "permalink"  : ".//h2/a",
     "subRequest" : {
-      "paragraph"            : "\/\/div[@class='article-body-more']\/\/p[@class='bd']\/\/a[img]",
-      "caption"              : "ancestor::div[@class='article-outer-3']\/\/h2\/a\/text()",
-      "imageSource"          : ".\/img\/@src",
-      "imageSourceForReblog" : ".\/@href"
+      "paragraph"            : "//div[@class='article-body-more']//p[@class='bd']//a[img]",
+      "caption"              : "ancestor::div[@class='article-outer-3']//h2/a/text()",
+      "imageSource"          : "./img/@src",
+      "imageSourceForReblog" : "./@href"
     }
   }
 },
 {
   "name" : "[NSFW] セックス・男女合体性交 画像掲示板",
   "data" : {
-    "url"        : "http:\/\/imgbbs1.artemisweb.jp\/2\/original023\/",
-    "paragraph"  : "\/\/table[@width='95%']",
-    "nextLink"   : "\/\/center\/a[text()='>>'][1]",
-    "permalink"  : ".\/\/a[1]",
+    "url"        : "http://imgbbs1.artemisweb.jp/2/original023/",
+    "paragraph"  : "//table[@width='95%']",
+    "nextLink"   : "//center/a[text()='>>'][1]",
+    "permalink"  : ".//a[1]",
     "subRequest" : {
       "paragraph"   : "id('rights_panel')",
-      "caption"     : "\/\/title",
-      "imageSource" : ".\/img"
+      "caption"     : "//title",
+      "imageSource" : "./img"
     }
   }
 }
