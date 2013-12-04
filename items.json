@@ -237,6 +237,20 @@
   }
 },
 {
+  "name" : "画像リプライ",
+  "data" : {
+    "url"        : "http://gazoreply.jp/",
+    "paragraph"  : "id('photo-list')/li[not(contains(@class,'ad-item'))]",
+    "nextLink"   : "id('site-situation-list')/li[@class='selected']/following-sibling::li[1]/a",
+    "permalink"  : "./div[@class='photo-thumbnail']/a",
+    "subRequest" : {
+      "paragraph"   : "id('main-photo')",
+      "caption"     : "./h2",
+      "imageSource" : "id('main-photo-img')"
+    }
+  }
+},
+{
   "name" : "[NSFW] オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http:\/\/okinny.heypo.net\/",
