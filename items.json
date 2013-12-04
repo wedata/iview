@@ -251,6 +251,21 @@
   }
 },
 {
+  "name" : "Travel Photos From TrekEarth",
+  "data" : {
+    "url"         : "http://www.trekearth.com/gallery/",
+    "needReferer" : "http://*.trekearth.com/photos/*",
+    "paragraph"   : "//ul[@class='photo-list']/li",
+    "nextLink"    : "//div[@class='page-nav']//li[last()]/a",
+    "permalink"   : ".//div[@class='photo-box']/a",
+    "subRequest"  : {
+      "paragraph"   : "//div[@class='gallery-img-box']",
+      "caption"     : "./img/@alt",
+      "imageSource" : "./img"
+    }
+  }
+},
+{
   "name" : "[NSFW] オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http:\/\/okinny.heypo.net\/",
