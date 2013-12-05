@@ -286,6 +286,20 @@
   }
 },
 {
+  "name" : "みっちりねこ [ファミ通App]",
+  "data" : {
+    "url"        : "http://app.famitsu.com/category/blog/mitchiri-neko/",
+    "paragraph"  : "id('main-contents')//div[@class='article-main']",
+    "nextLink"   : "//a[@class='pager-send next']",
+    "permalink"  : ".//h2[@class='article-title']/a",
+    "subRequest" : {
+      "paragraph"   : "id('entry-body')//a[starts-with(@rel,'attachment')]/img",
+      "caption"     : "//title",
+      "imageSource" : "./@data-lazy-src"
+    }
+  }
+},
+{
   "name" : "[NSFW] オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http://okinny.heypo.net/",
