@@ -254,7 +254,6 @@
   "name" : "Travel Photos From TrekEarth",
   "data" : {
     "url"         : "http://www.trekearth.com/gallery/",
-    "needReferer" : "http://*.trekearth.com/photos/*",
     "paragraph"   : "//ul[@class='photo-list']/li",
     "nextLink"    : "//div[@class='page-nav']//li[last()]/a",
     "permalink"   : ".//div[@class='photo-box']/a",
@@ -262,6 +261,9 @@
       "paragraph"   : "//div[@class='gallery-img-box']",
       "caption"     : "./img/@alt",
       "imageSource" : "./img"
+    },
+    "options"     : {
+      "needReferer" : "http://*.trekearth.com/photos/*"
     }
   }
 },
@@ -269,7 +271,6 @@
   "name" : "[pixiv] みんなの新着イラスト",
   "data" : {
     "url"         : "http://www.pixiv.net/new_illust.php",
-    "needReferer" : "http://*.pixiv.net/img*",
     "paragraph"   : "//li[@class='image-item']",
     "nextLink"    : "//a[@rel='next']",
     "permalink"   : ".//a[@class='work']",
@@ -278,6 +279,9 @@
       "caption"              : "//title",
       "imageSource"          : "./a/img",
       "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),'.',substring-after(./a/img/@src,'_m.'))"
+    },
+    "options"     : {
+      "needReferer" : "http://*.pixiv.net/img*"
     }
   }
 },
