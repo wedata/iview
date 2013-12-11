@@ -40,13 +40,13 @@
   "name" : "9GAG Fresh",
   "data" : {
     "url"        : "http://9gag.com/fresh",
-    "paragraph"  : "id('list-view-2')//article",
+    "paragraph"  : "id('list-view-2')//article[not(.//div[contains(@class,'video-container')])]",
     "nextLink"   : "//a[@class='btn badge-load-more-post']",
     "permalink"  : "./@data-entry-url",
     "subRequest" : {
       "paragraph"   : "id('individual-post')/article",
       "caption"     : ".//h2",
-      "imageSource" : "./div[@class='badge-entry-content post-container']//img/@src"
+      "imageSource" : "./div[contains(@class,'post-container')]//img[@class='badge-item-animated-img']/@src | ./div[contains(@class,'post-container')]//img/@src"
     }
   }
 },
@@ -60,7 +60,7 @@
     "subRequest" : {
       "paragraph"   : "id('individual-post')/article",
       "caption"     : ".//h2",
-      "imageSource" : "./div[@class='badge-entry-content post-container']//img[@class='badge-item-animated-img']/@src"
+      "imageSource" : "./div[contains(@class,'post-container')]//img[@class='badge-item-animated-img']/@src"
     }
   }
 },
