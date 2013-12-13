@@ -300,7 +300,7 @@
   }
 },
 {
-  "name" : "[NSFW] オキニー アダルト画像ブックマーク",
+  "name" : "オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http://okinny.heypo.net/",
     "paragraph"            : "//li[contains(@class,'hentry')]",
@@ -308,11 +308,14 @@
     "permalink"            : ".//a[@rel='bookmark']",
     "caption"              : ".//a[@rel='bookmark']/@title",
     "imageSource"          : ".//a[@rel='bookmark']/img",
-    "imageSourceForReblog" : ".//a[@class='image-source']/@href"
+    "imageSourceForReblog" : ".//a[@class='image-source']/@href",
+    "options"              : {
+      "NSFW" : true
+    }
   }
 },
 {
-  "name" : "[NSFW] Tokyo Undressed",
+  "name" : "Tokyo Undressed",
   "data" : {
     "url"          : "http://tokyoundressed.blogspot.com/feeds/posts/default",
     "paragraph"    : "//x:entry",
@@ -323,11 +326,14 @@
       "paragraph"   : ".//img[not(./@class)]",
       "cdata"       : "./x:content",
       "imageSource" : "./@src"
+    },
+    "options"      : {
+      "NSFW" : true
     }
   }
 },
 {
-  "name" : "[NSFW] みんくちゃんねる",
+  "name" : "みんくちゃんねる",
   "data" : {
     "url"        : "http://minkchan.com/",
     "paragraph"  : "//div[@class='article-outer hentry'][div[div[div[div[h2[a[starts-with(@href, 'http://minkchan.com')]]]]]]]",
@@ -338,11 +344,14 @@
       "caption"              : "ancestor::div[@class='article-outer-3']//h2/a/text()",
       "imageSource"          : "./img/@src",
       "imageSourceForReblog" : "./@href"
+    },
+    "options"    : {
+      "NSFW" : true
     }
   }
 },
 {
-  "name" : "[NSFW] セックス・男女合体性交 画像掲示板",
+  "name" : "セックス・男女合体性交 画像掲示板",
   "data" : {
     "url"        : "http://imgbbs1.artemisweb.jp/2/original023/",
     "paragraph"  : "//table[@width='95%']",
@@ -352,6 +361,9 @@
       "paragraph"   : "id('rights_panel')",
       "caption"     : "//title",
       "imageSource" : "./img"
+    },
+    "options"    : {
+      "NSFW" : true
     }
   }
 }
