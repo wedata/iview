@@ -16,7 +16,7 @@
     "url"         : "http://bokete.jp/boke/hot",
     "paragraph"   : "//div[contains(@class,'boke-entry ')][div[@class='photo']]",
     "nextLink"    : "id('pager-plusone')/span[@class='pager-plusone-next']/a",
-    "permalink"   : ".//div[@class='photo']/a",
+    "permalink"   : ".//p[@class='boke-entry-info']/a[last()]",
     "caption"     : ".//p[@class='boke_read']",
     "imageSource" : ".//div[@class='photo']/a/img"
   }
