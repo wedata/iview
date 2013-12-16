@@ -217,6 +217,7 @@
     "permalink"  : "./a[img]",
     "subRequest" : {
       "paragraph"   : "//div[@class='photo segment']",
+      "permalink"   : "//link[@rel='canonical']/@href",
       "caption"     : "//title",
       "imageSource" : ".//img[@class='the_photo']"
     }
@@ -231,6 +232,7 @@
     "permalink"  : "./a[img]",
     "subRequest" : {
       "paragraph"   : "//div[@class='photo segment']",
+      "permalink"   : "//link[@rel='canonical']/@href",
       "caption"     : "//title",
       "imageSource" : ".//img[@class='the_photo']"
     }
