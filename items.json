@@ -113,12 +113,12 @@
   }
 },
 {
-  "name" : "pya!",
+  "name" : "全作品 | pya! (ネタサイト)",
   "data" : {
     "url"        : "http://pya.cc/",
-    "paragraph"  : "//div[@class='m_ma'][div[b[text()='Photo' or text()='Gif' or text()='Twitter']]]",
+    "paragraph"  : "//div[@class='m_ma'][div[b[text()='Photo' or text()='Gif' or text()='Twitter']]]|//div[@class='ld01'][div/div[@class='ld05'][b[text()='Photo' or text()='Gif' or text()='Twitter']]]",
     "nextLink"   : "//a[@class='smpagelink'][@title='BACK']/@href",
-    "permalink"  : "./div[@class='m_ma2']/a/@href",
+    "permalink"  : "concat(./div[@class='m_ma2']/a/@href|.//div[@class='ld08']/a/@href,'?adultcheck=1')",
     "subRequest" : {
       "paragraph"   : "//div[@class='neta']",
       "caption"     : "//title",
