@@ -368,5 +368,23 @@
       "NSFW" : true
     }
   }
+},
+{
+  "name" : "iMG@三次元 | 三次元画像まとめ",
+  "data" : {
+    "url"        : "http://imgsanji.com/",
+    "paragraph"  : "//article",
+    "nextLink"   : "id('nav-below')/div[@class='nav-previous']/a",
+    "permalink"  : ".//h1/a",
+    "subRequest" : {
+      "paragraph"            : "id('content')//div[@class='entry-content']//a[img]",
+      "caption"              : "//title",
+      "imageSource"          : "./img/@src",
+      "imageSourceForReblog" : "./@href"
+    },
+    "options"    : {
+      "NSFW" : true
+    }
+  }
 }
 ]
