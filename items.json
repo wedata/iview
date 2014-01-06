@@ -318,6 +318,22 @@
   }
 },
 {
+
+  "name" : "Twitter List [美人]",
+  "data" : {
+    "url"        : "https://twitter.com/dbookshelf/lists/%E7%BE%8E%E4%BA%BA",
+    "paragraph"  : "id('timeline')//li[@data-item-type='tweet'][div[@data-card-type='photo']]",
+    "nextLink"   : "concat('?max_id=', id('timeline')//div[@data-max-id]/@data-max-id)",
+    "permalink"  : ".//a[contains(@class,'tweet-timestamp')]",
+    "subRequest" : {
+      "paragraph"            : "id('page-container')//a[contains(@class,'media-thumbnail')]",
+      "caption"              : "/html/head/title",
+      "imageSource"          : ".//img",
+      "imageSourceForReblog" : "./@data-resolved-url-large"
+    }
+  }
+},
+{
   "name" : "オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http://okinny.heypo.net/",
