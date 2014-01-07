@@ -334,6 +334,22 @@
   }
 },
 {
+
+  "name" : "Flickr Search [Squirrel]",
+  "data" : {
+    "url"        : "http://www.flickr.com/search/?q=squirrel&ct=0&mt=photos&adv=1&s=rec",
+    "paragraph"  : "id('photo-display-container')//div[@class='photo-display-item']",
+    "nextLink"   : "concat('/search/?q=squirrel&ct=0&mt=photos&adv=1&s=rec&page=',substring('2',1,number(not(contains(//div[@class='advanced-action']/a/@href,'page=')))),substring((number(substring-after(//div[@class='advanced-action']/a/@href,'page='))+1),1,number(contains(//div[@class='advanced-action']/a/@href,'page='))*string-length(number(substring-after(//div[@class='advanced-action']/a/@href,'page='))+1)))",
+    "permalink"  : ".//a[contains(@class,'photo-click')]",
+    "subRequest" : {
+      "paragraph"            : "//div[contains(@class,'photo-well-media-view')]",
+      "caption"              : "/html/head/title",
+      "imageSource"          : "./img[@class='low-res-photo']",
+      "imageSourceForReblog" : "./img[contains(@class,'main-photo')]"
+    }
+  }
+},
+{
   "name" : "オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http://okinny.heypo.net/",
