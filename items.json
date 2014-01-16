@@ -349,6 +349,21 @@
   }
 },
 {
+  "name" : "Daily Picks and Flicks / Fun Pic",
+  "data" : {
+    "url"        : "http://dailypicksandflicks.com/category/fun-pic/",
+    "paragraph"  : "id('articles')/div[@class='article']",
+    "nextLink"   : "//div[@class='navigation']//a[@class='nextpostslink']",
+    "permalink"  : "./a[@rel='bookmark']",
+    "subRequest" : {
+      "paragraph"   : "//div[starts-with(@id,'post-')]/p",
+      "permalink"   : "./a",
+      "caption"     : "./a/img/@title",
+      "imageSource" : "./a/img"
+    }
+  }
+},
+{
   "name" : "オキニー アダルト画像ブックマーク",
   "data" : {
     "url"                  : "http://okinny.heypo.net/",
