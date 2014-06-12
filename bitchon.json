@@ -6,8 +6,8 @@
     "paragraph"   : "//div[@class='container']",
     "permalink"   : "./a[@class='view']",
     "subRequest.caption"     : "//h1",
-    "subRequest.paragraph"   : "id('content')",
-    "subRequest.imageSource" : "./div[1]//img"
+    "subRequest.paragraph"   : "id('content')/div[1]",
+    "subRequest.imageSource" : ".//img"
     },
   "options"      : {
      "NSFW"   : true,
