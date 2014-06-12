@@ -7,7 +7,7 @@
     "permalink"   : "./a[@class='view']",
     "subRequest.caption"     : "//h1",
     "subRequest.paragraph"   : "id('content')",
-    "subRequest.imageSource" : "./div[1]/img[@class='lazy photo-b']"
+    "subRequest.imageSource" : "./div[1]//img[@class='lazy photo-b']"
     },
   "options"      : {
      "NSFW"   : true,
