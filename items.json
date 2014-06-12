@@ -454,7 +454,6 @@
   "data" : {
     "url"         : "http://bitchonko.com",
     "paragraph"   : "//div[@class='container']",
-    "nextLink"    : "//span[@class='next']/a",
     "permalink"   : "./a[@class='view']",
     "subRequest"  : {
       "caption"     : "//h1",
