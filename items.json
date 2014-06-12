@@ -448,7 +448,7 @@
       "NSFW" : true
     }
   }
-}
+},
 {
   "name" : "BitchonKo matome",
   "data" : {
@@ -461,6 +461,6 @@
       "paragraph"   : "id('content')",
       "imageSource" : "//a/img[@class='lazy photo-b]"
     }
-  },
+  }
 }
 ]
