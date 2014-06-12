@@ -452,7 +452,7 @@
 {
   "name" : "BitchonKo matome",
   "data" : {
-    "url"         : "http://bithonko.com",
+    "url"         : "http://bitchonko.com",
     "paragraph"   : "//div[@class='container']",
     "nextLink"    : "//span[@class='next']/a",
     "permalink"   : "/a[@class='view']",
