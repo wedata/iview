@@ -462,7 +462,8 @@
       "imageSource" : ".//a/img[@class='lazy photo-b']"
     },
    "options"      : {
-     "NSFW" : true
+     "NSFW"   : true,
+     "options" : "needReferer"
     }
   }
 }
