@@ -452,7 +452,7 @@
 {
   "name" : "BitchonKo matome",
   "data" : {
-    "url"         : "http://bithonko.com"
+    "url"         : "http://bithonko.com",
     "paragraph"   : "//div[@class='container']",
     "nextLink"    : "//span[@class='next']/a",
     "permalink"   : "/a[@class='view']",
@@ -460,6 +460,9 @@
     "subRequest"  : {
       "paragraph"   : "id('content')",
       "imageSource" : "//a/img[@class='lazy photo-b]"
+    },
+   "options"      : {
+     "NSFW" : true
     }
   }
 }
