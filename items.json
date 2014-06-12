@@ -457,7 +457,7 @@
     "nextLink"    : "//span[@class='next']/a",
     "permalink"   : "./a[@class='view']",
     "subRequest"  : {
-      "caption"     : ".//h1",
+      "caption"     : "//h1",
       "paragraph"   : "id('content')",
       "imageSource" : ".//a/img[@class='lazy photo-b']"
     },
