@@ -7,7 +7,7 @@
     "permalink"   : "./a[@class='view']",
     "subRequest.caption"     : "//h1",
     "subRequest.paragraph"   : "id('content')/div[1]",
-    "subRequest.imageSource" : "concat(substring-before('http://bitchonko.com/),substring-after('.//img')"
+    "subRequest.imageSource" : "concat(substring-before('http://bitchonko.com/'),substring-after(id('content')/div[1]//img)"
     },
   "options"      : {
      "NSFW"   : true,
