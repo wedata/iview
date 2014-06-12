@@ -2,18 +2,16 @@
 {
   "name" : "BitchonKo matome",
   "data" : {
-    "url"         : "http://bitchonko.com/",
+    "url"         : "http://bitchonko.com",
     "paragraph"   : "//div[@class='container']",
     "permalink"   : "./a[@class='view']",
-    "subRequest"  : {
-      "caption"     : "//h1",
-      "paragraph"   : "id('content')",
-      "imageSource" : ".//img[@class='lazy photo-b']"
+    "subRequest.caption"     : "//h1",
+    "subRequest.paragraph"   : "id('content')",
+    "subRequest.imageSource" : ".//img[@class='lazy photo-b']"
     },
-   "options"      : {
+  "options"      : {
      "NSFW"   : true,
      "options" : "needReferer"
-    }
   }
 }
 ]
