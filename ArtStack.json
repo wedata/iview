@@ -11,7 +11,7 @@
       "imageSource" : ".//img"
     },
     "option"      : {
-      "refere"  : true
+      "referer"  : true
     }
   }
 }
