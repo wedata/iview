@@ -1,0 +1,15 @@
+[
+{
+  "name" : "theWorsrDrug",
+  "data" : {
+    "url"         : "http://theworstdrug.com/video",
+    "paragraph"   : "//li[@class='lazy page1']",
+    "permalink"   : "./a",
+    "caption"     : "./a",
+    "imageSource" : "./a",
+    "options"     : {
+      "NSFW" : true
+    } 
+  }
+}
+]
