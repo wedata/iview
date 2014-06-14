@@ -6,7 +6,6 @@
     "paragraph"   : "//div[@class='main-content']//li",
     "permalink"   : "./div[@class='work']//a",
     "caption"     : "./div[@class='work work-caption']",
-    "imageSource" : "./a[@data-original]/div/div[1]/a",
     "subRequest"  : {
       "paragraph"   : "id('artwork'),
       "imageSpurce" : ".//img"
