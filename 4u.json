@@ -1,0 +1,17 @@
+[
+{
+  "name" : "4U",
+  "data" : {
+    "url"         : "http://4u-beautyimg.com",
+    "nextLink"    : "//div[@class='pager clearfix']/a[5]",
+    "paragraph"   : "id('contents')//li",
+    "permalink"   : ".//a",
+    "caption"     : ".//h3",
+    "imageSource" : ".//img"
+    },
+  "options"      : {
+     "NSFW"   : true,
+     "options" : "needReferer"
+  }
+}
+]
