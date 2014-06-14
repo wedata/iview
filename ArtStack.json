@@ -7,7 +7,7 @@
     "permalink"   : "./div[@class='work']//a",
     "caption"     : "./div[@class='work work-caption']",
     "subRequest"  : {
-      "paragraph"   : "id('artwork'),
+      "paragraph"   : "id('artwork')",
       "imageSource" : ".//img"
     }
   }
