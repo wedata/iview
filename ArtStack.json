@@ -1,6 +1,6 @@
 [
 {
-  "name" : "ArtStack/Trending"
+  "name" : "ArtStack/Trending",
   "data" : {
     "url"         : "http://theartstack.com/trending",
     "paragraph"   : "//div[@class='main-content']//li",
