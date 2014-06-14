@@ -6,8 +6,8 @@
     "nextLink"    : "//div[@class='pager clearfix']/a[5]",
     "paragraph"   : "id('centerColumn')/div",
     "permalink"   : "./a",
-    "request" : {
-      "paragram" : "id('indivPost-leftColumn'),
+    "subRequest" : {
+      "paragram"    : "id('indivPost-leftColumn')",
       "caption"     : "id('indivPost-rightColumn')/h4",
       "imageSource" : "./img"
       }
