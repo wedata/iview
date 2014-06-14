@@ -6,7 +6,7 @@
     "paragraph"   : "//li[@class='lazy page1']",
     "permalink"   : "./a",
     "caption"     : "./a",
-    "imageSource" : "./a",
+    "imageSource" : "./a[@data-original]",
     "options"     : {
       "NSFW" : true
     } 
