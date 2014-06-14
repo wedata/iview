@@ -3,11 +3,11 @@
   "name" : "HELLO KISSES",
   "data" : {
     "url"         : "http://hellokisses.com",
-    "nextLink"    : "//div[@class='pager clearfix']/a[5]",
+    "nextLink"    : "id('pager')//li[last()]",
     "paragraph"   : "id('centerColumn')/div",
     "permalink"   : "./a",
     "subRequest" : {
-      "paragram"    : "id('indivPost-leftColumn')",
+      "paragraph"    : "id('indivPost-leftColumn')",
       "caption"     : "id('indivPost-rightColumn')/h4",
       "imageSource" : "./img"
       }
