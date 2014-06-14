@@ -3,7 +3,7 @@
   "name" : "HELLO KISSES",
   "data" : {
     "url"         : "http://hellokisses.com",
-    "nextLink"    : "id('pager')//li[last()]",
+    "nextLink"    : "id('pager')//a[@class='last']",
     "paragraph"   : "id('centerColumn')/div",
     "permalink"   : "./a",
     "subRequest" : {
