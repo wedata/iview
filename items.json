@@ -458,11 +458,10 @@
     "permalink"   : "./a[@class='view']",
     "subRequest.caption"     : "//h1",
     "subRequest.paragraph"   : "id('content')/div[1]",
-    "subRequest.imageSource" : "id('content')/div[1]/a"
-    },
-  "options"      : {
-     "NSFW"   : true,
-     "options" : "needReferer"
+    "subRequest.imageSource" : "id('content')/div[1]/a",
+    "options"      : {
+      "NSFW"   : true
+    }
   }
 },
 {
@@ -473,11 +472,10 @@
     "paragraph"   : "id('contents')//li",
     "permalink"   : ".//a",
     "caption"     : ".//h3",
-    "imageSource" : ".//img"
-    },
-  "options"      : {
-     "NSFW"   : true,
-     "options" : "needReferer"
+    "imageSource" : ".//img",
+    "options"     : {
+      "NSFW"   : true
+    }
   }
 },
 {
@@ -487,15 +485,14 @@
     "nextLink"    : "id('pager')//a[@class='last']",
     "paragraph"   : "id('centerColumn')/div",
     "permalink"   : "./a",
-    "subRequest" : {
+    "subRequest"  : {
       "paragraph"    : "id('indivPost-leftColumn')",
-      "caption"     : "id('indivPost-rightColumn')/h4",
-      "imageSource" : "./img"
-      }
-    },
-  "options"      : {
-     "NSFW"   : true,
-     "options" : "needReferer"
+      "caption"      : "id('indivPost-rightColumn')/h4",
+      "imageSource"  : "./img"
+      },
+    "options"     : {
+      "NSFW"   : true,
+    }
   }
 }
 ]
