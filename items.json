@@ -491,7 +491,7 @@
       "imageSource"  : "./img"
       },
     "options"     : {
-      "NSFW"   : true,
+      "NSFW"   : true
     }
   }
 }
