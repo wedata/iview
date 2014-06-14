@@ -1,0 +1,20 @@
+[
+{
+  "name" : "HELLO KISSES",
+  "data" : {
+    "url"         : "http://hellokisses.com",
+    "nextLink"    : "//div[@class='pager clearfix']/a[5]",
+    "paragraph"   : "id('centerColumn')/div",
+    "permalink"   : "./a",
+    "request" : {
+      "paragram" : "id('indivPost-leftColumn'),
+      "caption"     : "id('indivPost-rightColumn')/h4",
+      "imageSource" : "./img"
+      }
+    },
+  "options"      : {
+     "NSFW"   : true,
+     "options" : "needReferer"
+  }
+}
+]
