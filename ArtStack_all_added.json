@@ -5,7 +5,7 @@
     "url"         : "http://theartstack.com/all_added",
     "paragraph"   : "//li[@class='feed-item']",
     "permalink"   : ".//div[@class='work-title']/a",
-    "caption"     : ".//div[@class='work-title']/a",
+    "caption"     : ".//div[@class='work-title']/a/text()",
     "subRequest"  : {
       "paragraph"   : "id('artwork')//div[@class='picture']",
       "imageSource" : "./a/img"
