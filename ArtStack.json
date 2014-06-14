@@ -4,11 +4,11 @@
   "data" : {
     "url"         : "http://theartstack.com/trending",
     "paragraph"   : "//div[@class='main-content']//li",
-    "permalink"   : "./div[@class='work']//a",
+    "permalink"   : "./div[@class='work work-caption']/div/div[1]/a",
     "caption"     : "./div[@class='work work-caption']",
     "subRequest"  : {
-      "paragraph"   : "id('artwork-picture')",
-      "imageSource" : ".//img"
+      "paragraph"   : "id('artwork')//div[@class='picture']",
+      "imageSource" : "./a/img"
     },
     "option"      : {
       "referer"  : true
