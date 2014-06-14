@@ -8,7 +8,7 @@
     "caption"     : "./div[@class='work work-caption']",
     "subRequest"  : {
       "paragraph"   : "id('artwork'),
-      "imageSpurce" : ".//img"
+      "imageSource" : ".//img"
     }
   }
 }
