@@ -468,7 +468,7 @@
   "name" : "4U",
   "data" : {
     "url"         : "http://4u-beautyimg.com",
-    "nextLink"    : "//div[@class='pager clearfix']/a[5]",
+    "nextLink"    : "//div[@class='pager clearfix']/a[last()-1]",
     "paragraph"   : "id('contents')//li",
     "permalink"   : ".//a",
     "caption"     : ".//h3",
