@@ -509,12 +509,14 @@
   "name" : "theWorstDrug",
   "data" : {
     "url"         : "http://theworstdrug.com/video",
-    "paragraph"   : "//li[@class='lazy page1']",
+    "nextLink"    : "concat('http://theworstdrug.com/video?page=',number(substring-after(//li[1]/@class,'lazy page'))+1)",
+    "paragraph"   : "//li[starts-with(@class,'lazy page')]",
     "permalink"   : "./a",
-    "caption"     : "./a",
+    "caption"     : "./a/@title",
     "imageSource" : "./a[@data-original]/@data-original",
     "options"     : {
-      "NSFW" : true
+      "needReferer" : "http://images.theworstdrug.com/*",
+      "NSFW"        : true
     }
   },
   "created_by" : "azwad",
