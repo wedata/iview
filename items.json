@@ -68,13 +68,15 @@
   "name" : "Tumblr Dashboard (Needs to log in Tumblr)",
   "data" : {
     "url"                  : "http://www.tumblr.com/dashboard",
-    "paragraph"            : "//li[div[contains(concat(' ',normalize-space(@class),' '), ' is_photo ')]]",
+    "paragraph"            : "//div[@class='post_wrapper']",
     "nextLink"             : "id('next_page_link')",
     "permalink"            : ".//a[@class='post_permalink']",
     "caption"              : ".//div[@class='post_body']",
-    "imageSource"          : ".//img[@class='image']/@src",
-    "imageSourceForReblog" : ".//img[@class='image']/@src"
-  }
+    "imageSource"          : ".//img[@class='post_media_photo image']/@src",
+    "imageSourceForReblog" : ".//img[@class='post_media_photo image']/@src"
+  },
+	"updated_by" : "azwad",
+	"updated_at" : "2014-07-11T14:00:00+9:00"
 },
 {
   "name" : "FFFFound!",
@@ -451,6 +453,8 @@
 },
 {
   "name" : "BitchonKo matome",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
   "data" : {
     "url"         : "http://bitchonko.com",
     "nextLink"    : "//span[@class='next']/a",
@@ -466,6 +470,8 @@
 },
 {
   "name" : "4U",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
   "data" : {
     "url"         : "http://4u-beautyimg.com",
     "nextLink"    : "//div[@class='pager clearfix']/a[last()-1]",
@@ -480,6 +486,8 @@
 },
 {
   "name" : "HELLO KISSES",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
   "data" : {
     "url"         : "http://hellokisses.com",
     "nextLink"    : "id('pager')//a[@class='last']",
@@ -493,6 +501,21 @@
     "options"     : {
       "NSFW"   : true
     }
+  }
+},
+{
+  "name" : "theWorstDrug",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
+  "data" : {
+    "url"         : "http://theworstdrug.com/video",
+    "paragraph"   : "//li[@class='lazy page1']",
+    "permalink"   : "./a",
+    "caption"     : "./a",
+    "imageSource" : "./a[@data-original]/@data-original",
+    "options"     : {
+      "NSFW" : true
+    } 
   }
 }
 ]
