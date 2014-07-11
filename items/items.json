@@ -1,0 +1,521 @@
+[
+{
+  "name" : "ボケて 新着ボケ",
+  "data" : {
+    "url"         : "http://bokete.jp/boke/recent",
+    "paragraph"   : "//div[contains(@class,'boke-list ')][div[@class='boke-list-odai']]",
+    "nextLink"    : "//a[@class='boke-recent-pager']|//a[@class='boke-recent-temp-pager']",
+    "permalink"   : ".//div[@class='boke-list-odai']//a",
+    "caption"     : ".//h3",
+    "imageSource" : ".//div[@class='boke-list-odai']//img"
+  }
+},
+{
+  "name" : "ボケて 注目ボケ",
+  "data" : {
+    "url"         : "http://bokete.jp/boke/hot",
+    "paragraph"   : "//div[contains(@class,'boke-entry ')][div[@class='photo']]",
+    "nextLink"    : "id('pager-plusone')/span[@class='pager-plusone-next']/a",
+    "permalink"   : ".//p[@class='boke-entry-info']/a[last()]",
+    "caption"     : ".//p[@class='boke_read']",
+    "imageSource" : ".//div[@class='photo']/a/img"
+  }
+},
+{
+  "name" : "台湾美少女３姉妹",
+  "data" : {
+    "url"          : "http://taiwan3sister.blogspot.com/feeds/posts/default",
+    "paragraph"    : "//x:entry",
+    "nextLink"     : "//x:link[@rel='next']/@href",
+    "permalink"    : ".//x:link[@rel='alternate']/@href",
+    "caption"      : "./x:title/text()",
+    "subParagraph" : {
+      "paragraph"   : ".//img[not(./@class)]",
+      "cdata"       : "./x:content",
+      "imageSource" : "concat(substring-before(./parent::a/@href,'-h/'),'/',substring-after(./parent::a/@href,'-h/'))"
+    }
+  }
+},
+{
+  "name" : "9GAG Fresh",
+  "data" : {
+    "url"        : "http://9gag.com/fresh",
+    "paragraph"  : "id('list-view-2')//article[not(.//div[contains(@class,'video-container')])]",
+    "nextLink"   : "//a[@class='btn badge-load-more-post']",
+    "permalink"  : "./@data-entry-url",
+    "subRequest" : {
+      "paragraph"   : "id('individual-post')/article",
+      "caption"     : ".//h2",
+      "imageSource" : "./div[contains(@class,'post-container')]//img[@class='badge-item-animated-img']/@src | ./div[contains(@class,'post-container')]//img/@src"
+    }
+  }
+},
+{
+  "name" : "9GAG GIF",
+  "data" : {
+    "url"        : "http://9gag.com/gif",
+    "paragraph"  : "id('list-view-2')//article",
+    "nextLink"   : "//a[@class='btn badge-load-more-post']",
+    "permalink"  : "./@data-entry-url",
+    "subRequest" : {
+      "paragraph"   : "id('individual-post')/article",
+      "caption"     : ".//h2",
+      "imageSource" : "./div[contains(@class,'post-container')]//img[@class='badge-item-animated-img']/@src"
+    }
+  }
+},
+{
+  "name" : "Tumblr Dashboard (Needs to log in Tumblr)",
+  "data" : {
+    "url"                  : "http://www.tumblr.com/dashboard",
+    "paragraph"            : "//div[@class='post_wrapper']",
+    "nextLink"             : "id('next_page_link')",
+    "permalink"            : ".//a[@class='post_permalink']",
+    "caption"              : ".//div[@class='post_body']",
+    "imageSource"          : ".//img[@class='post_media_photo image']/@src",
+    "imageSourceForReblog" : ".//img[@class='post_media_photo image']/@src"
+  },
+	"updated_by" : "azwad",
+	"updated_at" : "2014-07-11T14:00:00+9:00"
+},
+{
+  "name" : "FFFFound!",
+  "data" : {
+    "url"         : "http://ffffound.com/",
+    "paragraph"   : "//blockquote[@class='asset']",
+    "nextLink"    : "//a[@rel='next']/@href",
+    "permalink"   : ".//img/parent::a/@href",
+    "caption"     : ".//span[@class='quote']/following-sibling::a",
+    "imageSource" : ".//img/@src"
+  }
+},
+{
+  "name" : "imgfave",
+  "data" : {
+    "url"         : "http://imgfave.com/",
+    "paragraph"   : "id('main_content')/div[@class='item'][starts-with(@id,'item_')]",
+    "nextLink"    : "id('pagination')/span[@class='page_Next']/a",
+    "permalink"   : ".//a[@class='image_link']/@href",
+    "caption"     : "./div[@class='image_title']/a/text()",
+    "imageSource" : ".//a[@class='image_link']/img[@class='lazy']/@data-href|.//a[@class='image_link']/img/@src"
+  }
+},
+{
+  "name" : "Photo Journal - WSJ",
+  "data" : {
+    "url"        : "http://blogs.wsj.com/photojournal/",
+    "paragraph"  : "id('postList')/li",
+    "nextLink"   : "//li[@class='blognav_prev']/a",
+    "permalink"  : ".//h1/a/@href",
+    "subRequest" : {
+      "paragraph"   : "//div[@class='articlePage']/p",
+      "caption"     : ".",
+      "imageSource" : ".//img"
+    }
+  }
+},
+{
+  "name" : "全作品 | pya! (ネタサイト)",
+  "data" : {
+    "url"        : "http://pya.cc/",
+    "paragraph"  : "//div[@class='m_ma'][div[b[text()='Photo' or text()='Gif' or text()='Twitter']]]|//div[@class='ld01'][div/div[@class='ld05'][b[text()='Photo' or text()='Gif' or text()='Twitter']]]",
+    "nextLink"   : "//a[@class='smpagelink'][@title='BACK']/@href",
+    "permalink"  : "./div[@class='m_ma2']/a/@href|.//div[@class='ld08']/a/@href",
+    "subRequest" : {
+      "paragraph"   : "//div[@class='neta']",
+      "caption"     : "//title",
+      "imageSource" : ".//img"
+    }
+  }
+},
+{
+  "name" : "今日マチ子のセンネン画報",
+  "data" : {
+    "url"          : "http://juicyfruit.exblog.jp/",
+    "paragraph"    : "//div[@class='POST']",
+    "nextLink"     : "//a[@class='older_page']",
+    "permalink"    : ".//div[@class='POST_TTL']/a",
+    "caption"      : ".//div[@class='POST_TTL']",
+    "subParagraph" : {
+      "paragraph"   : ".//img[@class='IMAGE_MID']",
+      "imageSource" : "./@src"
+    }
+  }
+},
+{
+  "name" : "M O O D",
+  "data" : {
+    "url"        : "http://haw-lin.com/index",
+    "paragraph"  : "//div[@class='module']",
+    "permalink"  : ".//a/@href",
+    "subRequest" : {
+      "paragraph"   : "id('content_container')//img",
+      "caption"     : "//title",
+      "imageSource" : "./@src"
+    }
+  }
+},
+{
+  "name" : "Pixdaus",
+  "data" : {
+    "url"         : "http://pixdaus.com/pixdaus/items/browse/newest/",
+    "paragraph"   : "//div[@class='item mediumSquare']/div[@class='thumb']",
+    "nextLink"    : "//div[@class='paging clearfix']/a[@class='next']",
+    "permalink"   : "./a/@href",
+    "caption"     : ".//div[@class='title']/a/text()",
+    "imageSource" : "concat(substring-before(./a/img/@src,'_mdsq'),'_large',substring-after(./a/img/@src,'_mdsq'))"
+  }
+},
+{
+  "name" : "Astronomy Picture of the Day Archive",
+  "data" : {
+    "url"        : "http://antwrp.gsfc.nasa.gov/apod/archivepix.html",
+    "paragraph"  : "//b//a",
+    "permalink"  : "./@href",
+    "caption"    : "./text()",
+    "subRequest" : {
+      "paragraph"            : "//center/p/a/img",
+      "caption"              : "//title/text()",
+      "imageSource"          : "./@src",
+      "imageSourceForReblog" : "./parent::a/@href"
+    }
+  }
+},
+{
+  "name" : "Yanko Design",
+  "data" : {
+    "url"        : "http://www.yankodesign.com/",
+    "paragraph"  : "//div[@class='postcontent']",
+    "nextLink"   : "//div[@class='pagebar']/a[last()-1]",
+    "permalink"  : ".//h2/a[@rel='bookmark']",
+    "subRequest" : {
+      "paragraph"   : "//div[@class='postexcerpt']/p//img",
+      "caption"     : "//title/text()",
+      "imageSource" : "./@src"
+    }
+  }
+},
+{
+  "name" : "deviantART",
+  "data" : {
+    "url"        : "http://www.deviantart.com/",
+    "paragraph"  : "//div[@class='browse-results-page']//div[contains(concat(' ',@class,' '),' tt-a ')]",
+    "nextLink"   : "//div[@class='pagination']/a/@href",
+    "permalink"  : ".//span[@class='details']/a/@href",
+    "subRequest" : {
+      "paragraph"            : "//div[@class='dev-view-deviation']",
+      "caption"              : "//title/text()",
+      "imageSource"          : "./img[@class='dev-content-normal']/@src",
+      "imageSourceForReblog" : "./img[@class='dev-content-full']/@src"
+    }
+  }
+},
+{
+  "name" : "500px / Popular Photos",
+  "data" : {
+    "url"        : "http://500px.com/popular",
+    "paragraph"  : "//div[@class='photo medium']",
+    "nextLink"   : "//a[@rel='next']",
+    "permalink"  : "./a[img]",
+    "subRequest" : {
+      "paragraph"   : "//div[@class='photo segment']",
+      "permalink"   : "//link[@rel='canonical']/@href",
+      "caption"     : "//title",
+      "imageSource" : ".//img[@class='the_photo']"
+    }
+  }
+},
+{
+  "name" : "500px / Fresh",
+  "data" : {
+    "url"        : "http://500px.com/fresh",
+    "paragraph"  : "//div[@class='photo medium']",
+    "nextLink"   : "//a[@rel='next']",
+    "permalink"  : "./a[img]",
+    "subRequest" : {
+      "paragraph"   : "//div[@class='photo segment']",
+      "permalink"   : "//link[@rel='canonical']/@href",
+      "caption"     : "//title",
+      "imageSource" : ".//img[@class='the_photo']"
+    }
+  }
+},
+{
+  "name" : "画像リプライ",
+  "data" : {
+    "url"        : "http://gazoreply.jp/",
+    "paragraph"  : "id('photo-list')/li[not(contains(@class,'ad-item'))]",
+    "nextLink"   : "id('site-situation-list')/li[@class='selected']/following-sibling::li[1]/a",
+    "permalink"  : "./div[@class='photo-thumbnail']/a",
+    "subRequest" : {
+      "paragraph"   : "id('main-photo')",
+      "caption"     : "./h2",
+      "imageSource" : "id('main-photo-img')"
+    }
+  }
+},
+{
+  "name" : "Travel Photos From TrekEarth",
+  "data" : {
+    "url"         : "http://www.trekearth.com/gallery/",
+    "paragraph"   : "//ul[@class='photo-list']/li",
+    "nextLink"    : "//div[@class='page-nav']//li[last()]/a",
+    "permalink"   : ".//div[@class='photo-box']/a",
+    "subRequest"  : {
+      "paragraph"   : "//div[@class='gallery-img-box']",
+      "caption"     : "./img/@alt",
+      "imageSource" : "./img"
+    },
+    "options"     : {
+      "needReferer" : "http://*.trekearth.com/photos/*"
+    }
+  }
+},
+{
+  "name" : "[pixiv] みんなの新着イラスト",
+  "data" : {
+    "url"         : "http://www.pixiv.net/new_illust.php",
+    "paragraph"   : "//li[@class='image-item']",
+    "nextLink"    : "//a[@rel='next']",
+    "permalink"   : ".//a[@class='work']",
+    "subRequest"  : {
+      "paragraph"            : "//div[@class='works_display']",
+      "caption"              : "//title",
+      "imageSource"          : "./a/img",
+      "imageSourceForReblog" : "concat(substring-before(./a/img/@src,'_m.'),'.',substring-after(./a/img/@src,'_m.'))"
+    },
+    "options"     : {
+      "needReferer" : "http://*.pixiv.net/img*"
+    }
+  }
+},
+{
+  "name" : "みっちりねこ [ファミ通App]",
+  "data" : {
+    "url"        : "http://app.famitsu.com/category/blog/mitchiri-neko/",
+    "paragraph"  : "id('main-contents')//div[@class='article-main']",
+    "nextLink"   : "//a[@class='pager-send next']",
+    "permalink"  : ".//h2[@class='article-title']/a",
+    "subRequest" : {
+      "paragraph"   : "id('entry-body')//a[starts-with(@rel,'attachment')]/img",
+      "caption"     : "//title",
+      "imageSource" : "./@data-lazy-src"
+    }
+  }
+},
+{
+
+  "name" : "Twitter Dashboard (Needs to log in Twitter)",
+  "data" : {
+    "url"        : "https://twitter.com",
+    "paragraph"  : "id('timeline')//li[@data-item-type='tweet'][div[@data-card-type='photo']]",
+    "nextLink"   : "concat(substring('?max_id=',1,number((id('timeline')//div[@data-max-id!='-1']/@data-max-id)!='')*string-length('?max_id=')), id('timeline')//div[@data-max-id!='-1']/@data-max-id)",
+    "permalink"  : ".//a[contains(@class,'tweet-timestamp')]",
+    "subRequest" : {
+      "paragraph"            : "id('page-container')//a[contains(@class,'media-thumbnail')]",
+      "caption"              : "/html/head/title",
+      "imageSource"          : ".//img",
+      "imageSourceForReblog" : "./@data-resolved-url-large"
+    }
+  }
+},
+{
+
+  "name" : "Twitter List [美人]",
+  "data" : {
+    "url"        : "https://twitter.com/dbookshelf/lists/%E7%BE%8E%E4%BA%BA",
+    "paragraph"  : "id('timeline')//li[@data-item-type='tweet'][div[@data-card-type='photo']]",
+    "nextLink"   : "concat(substring('?max_id=',1,number((id('timeline')//div[@data-max-id!='-1']/@data-max-id)!='')*string-length('?max_id=')), id('timeline')//div[@data-max-id!='-1']/@data-max-id)",
+    "permalink"  : ".//a[contains(@class,'tweet-timestamp')]",
+    "subRequest" : {
+      "paragraph"            : "id('page-container')//a[contains(@class,'media-thumbnail')]",
+      "caption"              : "/html/head/title",
+      "imageSource"          : ".//img",
+      "imageSourceForReblog" : "./@data-resolved-url-large"
+    }
+  }
+},
+{
+
+  "name" : "Flickr Search [Squirrel]",
+  "data" : {
+    "url"        : "http://www.flickr.com/search/?q=squirrel&mt=photos&adv=1&s=rec",
+    "paragraph"  : "id('photo-display-container')//div[@class='photo-display-item']",
+    "nextLink"   : "concat('/search/?q=squirrel&mt=photos&adv=1&s=rec&page=',substring('2',1,number(not(contains(//div[@class='advanced-action']/a/@href,'page=')))),substring((number(substring-after(//div[@class='advanced-action']/a/@href,'page='))+1),1,number(contains(//div[@class='advanced-action']/a/@href,'page='))*string-length(number(substring-after(//div[@class='advanced-action']/a/@href,'page='))+1)))",
+    "permalink"  : "concat(.//a[contains(@class,'photo-click')]/@href, 'sizes')",
+    "subRequest" : {
+      "paragraph"   : "id('allsizes-photo')",
+      "caption"     : "substring-after(/html/head/title, 'All sizes | ')",
+      "imageSource" : "./img"
+    }
+  }
+},
+{
+  "name" : "Daily Picks and Flicks / Fun Pic",
+  "data" : {
+    "url"        : "http://dailypicksandflicks.com/category/fun-pic/",
+    "paragraph"  : "id('articles')/div[@class='article']",
+    "nextLink"   : "//div[@class='navigation']//a[@class='nextpostslink']",
+    "permalink"  : "./a[@rel='bookmark']",
+    "subRequest" : {
+      "paragraph"   : "//div[starts-with(@id,'post-')]/p",
+      "permalink"   : "./a",
+      "caption"     : "./a/img/@title",
+      "imageSource" : "./a/img"
+    }
+  }
+},
+{
+  "name" : "オキニー アダルト画像ブックマーク",
+  "data" : {
+    "url"                  : "http://okinny.heypo.net/",
+    "paragraph"            : "//li[contains(@class,'hentry')]",
+    "nextLink"             : "//a[@rel='next']",
+    "permalink"            : ".//a[@rel='bookmark']",
+    "caption"              : ".//a[@rel='bookmark']/@title",
+    "imageSource"          : ".//a[@rel='bookmark']/img",
+    "imageSourceForReblog" : ".//a[@class='image-source']/@href",
+    "options"              : {
+      "NSFW" : true
+    }
+  }
+},
+{
+  "name" : "Tokyo Undressed",
+  "data" : {
+    "url"          : "http://tokyoundressed.blogspot.com/feeds/posts/default",
+    "paragraph"    : "//x:entry",
+    "nextLink"     : ".//x:link[@rel='next']/@href",
+    "permalink"    : ".//x:link[@rel='alternate']/@href",
+    "caption"      : "./x:title/text()",
+    "subParagraph" : {
+      "paragraph"   : ".//img[not(./@class)]",
+      "cdata"       : "./x:content",
+      "imageSource" : "./@src"
+    },
+    "options"      : {
+      "NSFW" : true
+    }
+  }
+},
+{
+  "name" : "みんくちゃんねる",
+  "data" : {
+    "url"        : "http://minkchan.com/",
+    "paragraph"  : "//div[@class='article-outer hentry'][div[div[div[div[h2[a[starts-with(@href, 'http://minkchan.com')]]]]]]]",
+    "nextLink"   : "//link[@rel='next']",
+    "permalink"  : ".//h2/a",
+    "subRequest" : {
+      "paragraph"            : "//div[@class='article-body-more']//p[@class='bd']//a[img]",
+      "caption"              : "ancestor::div[@class='article-outer-3']//h2/a/text()",
+      "imageSource"          : "./img/@src",
+      "imageSourceForReblog" : "./@href"
+    },
+    "options"    : {
+      "NSFW" : true
+    }
+  }
+},
+{
+  "name" : "セックス・男女合体性交 画像掲示板",
+  "data" : {
+    "url"        : "http://imgbbs1.artemisweb.jp/2/original023/",
+    "paragraph"  : "//table[@width='95%']",
+    "nextLink"   : "//center/a[text()='>>'][1]",
+    "permalink"  : ".//a[1]",
+    "subRequest" : {
+      "paragraph"   : "id('rights_panel')",
+      "caption"     : "//title",
+      "imageSource" : "./img"
+    },
+    "options"    : {
+      "NSFW" : true
+    }
+  }
+},
+{
+  "name" : "iMG@三次元 | 三次元画像まとめ",
+  "data" : {
+    "url"        : "http://imgsanji.com/",
+    "paragraph"  : "//article",
+    "nextLink"   : "id('nav-below')/div[@class='nav-previous']/a",
+    "permalink"  : ".//h1/a",
+    "subRequest" : {
+      "paragraph"            : "id('content')//div[@class='entry-content']//a[img]",
+      "caption"              : "//title",
+      "imageSource"          : "./img/@src",
+      "imageSourceForReblog" : "./@href"
+    },
+    "options"    : {
+      "NSFW" : true
+    }
+  }
+},
+{
+  "name" : "BitchonKo matome",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
+  "data" : {
+    "url"         : "http://bitchonko.com",
+    "nextLink"    : "//span[@class='next']/a",
+    "paragraph"   : "//div[@class='container']",
+    "permalink"   : "./a[@class='view']",
+    "subRequest.caption"     : "//h1",
+    "subRequest.paragraph"   : "id('content')/div[1]",
+    "subRequest.imageSource" : "id('content')/div[1]/a",
+    "options"      : {
+      "NSFW"   : true
+    }
+  }
+},
+{
+  "name" : "4U",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
+  "data" : {
+    "url"         : "http://4u-beautyimg.com",
+    "nextLink"    : "//div[@class='pager clearfix']/a[last()-1]",
+    "paragraph"   : "id('contents')//li",
+    "permalink"   : ".//a",
+    "caption"     : ".//h3",
+    "imageSource" : ".//img",
+    "options"     : {
+      "NSFW"   : true
+    }
+  }
+},
+{
+  "name" : "HELLO KISSES",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
+  "data" : {
+    "url"         : "http://hellokisses.com",
+    "nextLink"    : "id('pager')//a[@class='last']",
+    "paragraph"   : "id('centerColumn')/div",
+    "permalink"   : "./a",
+    "subRequest"  : {
+      "paragraph"    : "id('indivPost-leftColumn')",
+      "caption"      : "id('indivPost-rightColumn')/h4",
+      "imageSource"  : "./img"
+      },
+    "options"     : {
+      "NSFW"   : true
+    }
+  }
+},
+{
+  "name" : "theWorstDrug",
+	"created_by" : "azwad",
+	"created_at" : "2014-07-11T14:00:00+9:00",
+  "data" : {
+    "url"         : "http://theworstdrug.com/video",
+    "paragraph"   : "//li[@class='lazy page1']",
+    "permalink"   : "./a",
+    "caption"     : "./a",
+    "imageSource" : "./a[@data-original]/@data-original",
+    "options"     : {
+      "NSFW" : true
+    } 
+  }
+}
+]

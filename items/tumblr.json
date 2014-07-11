@@ -1,0 +1,14 @@
+[
+{
+  "name" : "Tumblr Dashboard (Needs to log in Tumblr)",
+  "data" : {
+    "url"                  : "http://www.tumblr.com/dashboard",
+    "paragraph"            : "//div[@class='post_wrapper']",
+    "nextLink"             : "id('next_page_link')",
+    "permalink"            : ".//a[@class='post_permalink']",
+    "caption"              : ".//div[@class='post_body']",
+    "imageSource"          : ".//img[@class='post_media_photo image']/@src",
+    "imageSourceForReblog" : ".//img[@class='post_media_photo image']/@src"
+  }
+}
+]
