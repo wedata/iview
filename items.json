@@ -491,11 +491,11 @@
   "data" : {
     "url"        : "http://hellokisses.com",
     "nextLink"   : "id('pager')//a[@class='last']",
-    "paragraph"  : "id('centerColumn')/div",
+    "paragraph"  : "id('leftColumn')/div[@class='image'] | id('centerColumn')/div[@class='image'] | id('rightColumn')/div[@class='image']",
     "permalink"  : "./a",
     "subRequest" : {
       "paragraph"   : "id('indivPost-leftColumn')",
-      "caption"     : "id('indivPost-rightColumn')/h4",
+      "caption"     : "./img/@alt",
       "imageSource" : "./img"
       },
     "options"     : {
