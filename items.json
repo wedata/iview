@@ -68,13 +68,15 @@
   "name" : "Tumblr Dashboard (Needs to log in Tumblr)",
   "data" : {
     "url"                  : "http://www.tumblr.com/dashboard",
-    "paragraph"            : "//li[div[contains(concat(' ',normalize-space(@class),' '), ' is_photo ')]]",
+    "paragraph"            : "//div[@class='post_wrapper']",
     "nextLink"             : "id('next_page_link')",
     "permalink"            : ".//a[@class='post_permalink']",
     "caption"              : ".//div[@class='post_body']",
-    "imageSource"          : ".//img[@class='image']/@src",
-    "imageSourceForReblog" : ".//img[@class='image']/@src"
-  }
+    "imageSource"          : ".//img[@class='post_media_photo image']/@src",
+    "imageSourceForReblog" : ".//img[@class='post_media_photo image']/@src"
+  },
+	"updated_by" : "azwad",
+	"updated_at" : "2014-07-11T14:00:00+9:00"
 },
 {
   "name" : "FFFFound!",
@@ -448,5 +450,76 @@
       "NSFW" : true
     }
   }
+},
+{
+  "name" : "BitchonKo matome",
+  "data" : {
+    "url"        : "http://bitchonko.com",
+    "nextLink"   : "//span[@class='next']/a",
+    "paragraph"  : "//div[@class='container']",
+    "permalink"  : "./a[@class='view']",
+    "subRequest" : {
+      "paragraph"   : "id('content')/div[a[@class='expand']]",
+      "caption"     : "//h1",
+      "imageSource" : "./a[@class='expand']"
+    },
+    "options"    : {
+      "NSFW" : true
+    }
+  },
+  "created_by" : "azwad",
+  "created_at" : "2014-07-11T14:00:00+9:00"
+},
+{
+  "name" : "4U",
+  "data" : {
+    "url"         : "http://4u-beautyimg.com",
+    "nextLink"    : "//div[@class='pager clearfix']/a[last()-1]",
+    "paragraph"   : "id('contents')//li",
+    "permalink"   : ".//a",
+    "caption"     : ".//h3",
+    "imageSource" : ".//img",
+    "options"     : {
+      "NSFW" : true
+    }
+  },
+  "created_by" : "azwad",
+  "created_at" : "2014-07-11T14:00:00+9:00"
+},
+{
+  "name" : "HELLO KISSES",
+  "data" : {
+    "url"        : "http://hellokisses.com",
+    "nextLink"   : "id('pager')//a[@class='last']",
+    "paragraph"  : "id('leftColumn')/div[@class='image'] | id('centerColumn')/div[@class='image'] | id('rightColumn')/div[@class='image']",
+    "permalink"  : "./a",
+    "subRequest" : {
+      "paragraph"   : "id('indivPost-leftColumn')",
+      "caption"     : "./img/@alt",
+      "imageSource" : "./img"
+      },
+    "options"     : {
+      "NSFW"   : true
+    }
+  },
+  "created_by" : "azwad",
+  "created_at" : "2014-07-11T14:00:00+9:00"
+},
+{
+  "name" : "theWorstDrug",
+  "data" : {
+    "url"         : "http://theworstdrug.com/video",
+    "nextLink"    : "concat('http://theworstdrug.com/video?page=',number(substring-after(//li[1]/@class,'lazy page'))+1)",
+    "paragraph"   : "//li[starts-with(@class,'lazy page')]",
+    "permalink"   : "./a",
+    "caption"     : "./a/@title",
+    "imageSource" : "./a[@data-original]/@data-original",
+    "options"     : {
+      "needReferer" : "http://images.theworstdrug.com/*",
+      "NSFW"        : true
+    }
+  },
+  "created_by" : "azwad",
+  "created_at" : "2014-07-11T14:00:00+9:00"
 }
 ]
