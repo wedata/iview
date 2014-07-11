@@ -459,9 +459,9 @@
     "paragraph"  : "//div[@class='container']",
     "permalink"  : "./a[@class='view']",
     "subRequest" : {
-      "paragraph"   : "id('content')/div[1]",
+      "paragraph"   : "id('content')/div[a[@class='expand']]",
       "caption"     : "//h1",
-      "imageSource" : "id('content')/div[1]/a"
+      "imageSource" : "./a[@class='expand']"
     },
     "options"    : {
       "NSFW" : true
