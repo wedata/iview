@@ -1,0 +1,26 @@
+08a308e Fix the domain name
+ceed95d Add "Daily Picks and Flicks / Fun Pic"
+6fb033f Fix for users who login Flickr
+d071778 Add Flickr Search
+66e6f7e Fix nextLink to return '' at the end
+8cddf2e Add Twitter List
+c60d2a4 Add Twitter Dashboard
+a4b64c4 Remove adultcheck
+bf03272 Add imgsanji.com
+eeff384 Update pya!
+f2bb9bd Fix a bug to get a boke link correctly
+459e3b8 Add permalink to replace with the canonical link
+3cafdcb Add NSFW options
+df440ad Fix a bug for 9GAG
+4290514 Add "Mitchiri Neko"
+ec82339 Move needReferer to under options
+ada8254 Clean up
+feebe3f Add pixiv new_illust
+de6656a Add Travel Photos From TrekEarth
+fcdd2ca Add gazoreply.jp
+17ed33d Add 500px / Fresh
+01c074f Add 500px / Popular Photos
+3a95a31 Fix some paragraphs
+ff63d90 Import index.html and github.js from gh-pages
+6faf956 Add a link to the scheme definition
+5b71861 Initial Commit
